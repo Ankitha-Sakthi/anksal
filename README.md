@@ -6,23 +6,45 @@
 
 ## Basic Details
 
-### Team Name: [Name]
+### Team Name:  Codex
 
 ### Team Members
-- Member 1: [Name] - [College]
-- Member 2: [Name] - [College]
+- Member 1: Ankitha S - Tkm college of Engineering,Kollam
+- Member 2: Salabha Krishnan - Tkm college of Engineering,Kollam
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[2-3 lines about what your project does]
+Quick Travel is a real-time traffic disruption reporting platform where users can report accidents, roadblocks, railway crossings, or events. These reports are displayed live on a map so nearby users can avoid delays and plan smarter routes.
+
+The system combines crowdsourced data + live visualization to improve urban travel decisions.
 
 ### The Problem statement
-[What problem are you solving?]
+Urban commuters face unexpected delays due to:
+
+Accidents
+
+Roadblocks
+
+Railway crossings
+
+Public events
+
+Current map apps show traffic density but don’t allow users to report local disruptions quickly.
 
 ### The Solution
-[How are you solving it?]
+Quick Travel allows users to:
+
+Report disruptions instantly
+
+View live reports on a map
+
+Filter disruptions by location
+
+Clear outdated reports automatically
+
+This creates a community-powered real-time traffic awareness system.
 
 ---
 
@@ -31,50 +53,61 @@
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [e.g., JavaScript, Python, Java]
-- Frameworks used: [e.g., React, Django, Spring Boot]
-- Libraries used: [e.g., axios, pandas, JUnit]
-- Tools used: [e.g., VS Code, Git, Docker]
+Languages used: JavaScript
+
+Frameworks used: React, Express.js
+
+Libraries used: Leaflet, React-Leaflet, Axios
+
+Database: MongoDB
+
+Tools used: Git, VS Code, Postman, npm, Verce
 
 **For Hardware:**
-- Main components: [List main components]
-- Specifications: [Technical specifications]
-- Tools required: [List tools needed]
+Not applicable (Web-based project)
 
 ---
 
 ## Features
 
-List the key features of your project:
-- Feature 1: [Description]
-- Feature 2: [Description]
-- Feature 3: [Description]
-- Feature 4: [Description]
+Live map showing disruption markers
 
----
+Report submission form with instant update
+
+Search disruptions by location
+
+Auto-expiry of old reports
+
+Backend API storing reports in database
+
+Clean responsive UI for hackathon demo
 
 ## Implementation
 
 ### For Software:
 
 #### Installation
-```bash
-[Installation commands - e.g., npm install, pip install -r requirements.txt]
-```
+# Frontend
+cd frontend
+npm install
+
+# Backend
+cd backend
+npm install
+
 
 #### Run
 ```bash
-[Run commands - e.g., npm start, python app.py]
-```
+# Run backend
+cd backend
+npm start
 
-### For Hardware:
+# Run frontend
+cd frontend
+npm start
 
-#### Components Required
-[List all components needed with specifications]
-
-#### Circuit Setup
-[Explain how to set up the circuit]
-
+Frontend runs on:http://localhost:3000
+Backend runs on:http://localhost:5000
 ---
 
 ## Project Documentation
@@ -83,21 +116,23 @@ List the key features of your project:
 
 #### Screenshots (Add at least 3)
 
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
+<img width="1912" height="956" alt="image" src="https://github.com/user-attachments/assets/10b7024d-f595-4b4b-9b81-46adbc3e0a26" />
+Home page initially
 
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
+<img width="1917" height="788" alt="image" src="https://github.com/user-attachments/assets/b3617c9d-9b98-4751-9209-206089313105" />
+reporting the traffic
 
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="1057" height="890" alt="image" src="https://github.com/user-attachments/assets/0b6749cb-121d-447b-a5c6-3698443d8e7a" />
+You can see reported places and also for multiple search. You can use maps to find them.
+
 
 #### Diagrams
 
 **System Architecture:**
 
 ![Architecture Diagram](docs/architecture.png)
-*Explain your system architecture - components, data flow, tech stack interaction*
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/43115e33-1292-41e6-9374-a6511321240a" />
+The system follows a client–server architecture. The frontend handles user interaction, the backend processes requests and communicates with the database. APIs are used to exchange data between components.
 
 **Application Workflow:**
 
@@ -137,284 +172,134 @@ List the key features of your project:
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:**  http://localhost:5000/api
 
 ##### Endpoints
 
 **GET /api/endpoint**
-- **Description:** [What it does]
-- **Parameters:**
-  - `param1` (string): [Description]
-  - `param2` (integer): [Description]
-- **Response:**
-```json
-{
-  "status": "success",
-  "data": {}
-}
-```
+- **Description:** Fetch all disruption reports
+[
+  {
+    "_id": "123",
+    "type": "Accident",
+    "location": "Chennai",
+    "description": "Minor collision",
+    "lat": 13.08,
+    "lng": 80.27
+  }
+]
 
 **POST /api/endpoint**
-- **Description:** [What it does]
-- **Request Body:**
+
+{
+  "type": "Roadblock",
+  "location": "Kollam",
+  "description": "Construction work",
+  "lat": 8.893,
+  "lng": 76.614
+}
+### Response Example
+
 ```json
 {
-  "field1": "value1",
-  "field2": "value2"
+  "message": "Report saved successfully"
 }
 ```
-- **Response:**
-```json
-{
-  "status": "success",
-  "message": "Operation completed"
-}
-```
-
-[Add more endpoints as needed...]
-
 ---
 
-### For Mobile Apps:
 
-#### App Flow Diagram
-
-![App Flow](docs/app-flow.png)
-*Explain the user flow through your application*
-
-#### Installation Guide
-
-**For Android (APK):**
-1. Download the APK from [Release Link]
-2. Enable "Install from Unknown Sources" in your device settings:
-   - Go to Settings > Security
-   - Enable "Unknown Sources"
-3. Open the downloaded APK file
-4. Follow the installation prompts
-5. Open the app and enjoy!
-
-**For iOS (IPA) - TestFlight:**
-1. Download TestFlight from the App Store
-2. Open this TestFlight link: [Your TestFlight Link]
-3. Click "Install" or "Accept"
-4. Wait for the app to install
-5. Open the app from your home screen
-
-**Building from Source:**
-```bash
-# For Android
-flutter build apk
-# or
-./gradlew assembleDebug
-
-# For iOS
-flutter build ios
-# or
-xcodebuild -workspace App.xcworkspace -scheme App -configuration Debug
-```
-
----
-
-### For Hardware Projects:
-
-#### Bill of Materials (BOM)
-
-| Component | Quantity | Specifications | Price | Link/Source |
-|-----------|----------|----------------|-------|-------------|
-| Arduino Uno | 1 | ATmega328P, 16MHz | ₹450 | [Link] |
-| LED | 5 | Red, 5mm, 20mA | ₹5 each | [Link] |
-| Resistor | 5 | 220Ω, 1/4W | ₹1 each | [Link] |
-| Breadboard | 1 | 830 points | ₹100 | [Link] |
-| Jumper Wires | 20 | Male-to-Male | ₹50 | [Link] |
-| [Add more...] | | | | |
-
-**Total Estimated Cost:** ₹[Amount]
-
-#### Assembly Instructions
-
-**Step 1: Prepare Components**
-1. Gather all components listed in the BOM
-2. Check component specifications
-3. Prepare your workspace
-![Step 1](images/assembly-step1.jpg)
-*Caption: All components laid out*
-
-**Step 2: Build the Power Supply**
-1. Connect the power rails on the breadboard
-2. Connect Arduino 5V to breadboard positive rail
-3. Connect Arduino GND to breadboard negative rail
-![Step 2](images/assembly-step2.jpg)
-*Caption: Power connections completed*
-
-**Step 3: Add Components**
-1. Place LEDs on breadboard
-2. Connect resistors in series with LEDs
-3. Connect LED cathodes to GND
-4. Connect LED anodes to Arduino digital pins (2-6)
-![Step 3](images/assembly-step3.jpg)
-*Caption: LED circuit assembled*
-
-**Step 4: [Continue for all steps...]**
-
-**Final Assembly:**
-![Final Build](images/final-build.jpg)
-*Caption: Completed project ready for testing*
-
----
-
-### For Scripts/CLI Tools:
-
-#### Command Reference
-
-**Basic Usage:**
-```bash
-python script.py [options] [arguments]
-```
-
-**Available Commands:**
-- `command1 [args]` - Description of what command1 does
-- `command2 [args]` - Description of what command2 does
-- `command3 [args]` - Description of what command3 does
-
-**Options:**
-- `-h, --help` - Show help message and exit
-- `-v, --verbose` - Enable verbose output
-- `-o, --output FILE` - Specify output file path
-- `-c, --config FILE` - Specify configuration file
-- `--version` - Show version information
-
-**Examples:**
-
-```bash
-# Example 1: Basic usage
-python script.py input.txt
-
-# Example 2: With verbose output
-python script.py -v input.txt
-
-# Example 3: Specify output file
-python script.py -o output.txt input.txt
-
-# Example 4: Using configuration
-python script.py -c config.json --verbose input.txt
-```
-
-#### Demo Output
-
-**Example 1: Basic Processing**
-
-**Input:**
-```
-This is a sample input file
-with multiple lines of text
-for demonstration purposes
-```
-
-**Command:**
-```bash
-python script.py sample.txt
-```
-
-**Output:**
-```
-Processing: sample.txt
-Lines processed: 3
-Characters counted: 86
-Status: Success
-Output saved to: output.txt
-```
-
-**Example 2: Advanced Usage**
-
-**Input:**
-```json
-{
-  "name": "test",
-  "value": 123
-}
-```
-
-**Command:**
-```bash
-python script.py -v --format json data.json
-```
-
-**Output:**
-```
-[VERBOSE] Loading configuration...
-[VERBOSE] Parsing JSON input...
-[VERBOSE] Processing data...
-{
-  "status": "success",
-  "processed": true,
-  "result": {
-    "name": "test",
-    "value": 123,
-    "timestamp": "2024-02-07T10:30:00"
-  }
-}
-[VERBOSE] Operation completed in 0.23s
-```
-
----
 
 ## Project Demo
 
 ### Video
-[Add your demo video link here - YouTube, Google Drive, etc.]
+https://drive.google.com/file/d/1PMyV5LofJ_F4QIWY9Yviv83lKg2x8Tsp/view?usp=sharing
 
-*Explain what the video demonstrates - key features, user flow, technical highlights*
+### Demo Video Explanation
 
-### Additional Demos
-[Add any extra demo materials/links - Live site, APK download, online demo, etc.]
+The demo video showcases the working of the Quick Travel traffic monitoring platform.
 
----
+It demonstrates how users can report real-time disruptions such as accidents, railway crossings, roadblocks, and public events through the reporting form. Once submitted, the disruption appears instantly on the live map, allowing other users to view and track traffic issues in their area.
+
+The video highlights:
+- Real-time disruption reporting
+- Interactive map visualization of incidents
+- Search and filtering of disruptions by location
+- Backend API communication for storing reports
+- MongoDB database integration for persistent storage
+
+Overall, the video demonstrates the complete workflow from user input to data storage and visualization, showcasing both frontend interactivity and backend data handling.
+
+### Database Used: MongoDB
+
+MongoDB is a NoSQL document-based database used to store traffic disruption reports in this project.
+
+Instead of storing data in tables like traditional SQL databases, MongoDB stores data as JSON-like documents. This makes it highly flexible and suitable for dynamic applications where data structures may evolve over time.
+
+In the Quick Travel system, MongoDB is used to:
+- Store reported disruptions with location, type, and description
+- Maintain timestamps for each report
+- Allow quick retrieval of reports for map visualization
+- Enable scalable storage for large amounts of real-time data
+
+MongoDB’s speed, flexibility, and ease of integration with Node.js made it an ideal choice for this real-time traffic monitoring application.
+
 
 ## AI Tools Used (Optional - For Transparency Bonus)
 
 If you used AI tools during development, document them here for transparency:
 
-**Tool Used:** [e.g., GitHub Copilot, v0.dev, Cursor, ChatGPT, Claude]
+**Tool Used:**  GitHub Copilot,ChatGPT
 
-**Purpose:** [What you used it for]
-- Example: "Generated boilerplate React components"
-- Example: "Debugging assistance for async functions"
-- Example: "Code review and optimization suggestions"
+**Purpose:**
+Assisted in development and debugging of the project
+- Generated boilerplate React components
+- Helped debug API integration issues
+- Assisted with backend route structure
+- Suggested UI improvements and styling ideas
+- Helped create documentation and diagrams
 
 **Key Prompts Used:**
-- "Create a REST API endpoint for user authentication"
-- "Debug this async function that's causing race conditions"
-- "Optimize this database query for better performance"
+- "Create a backend API endpoint to save traffic disruption reports"
+- "Debug why my React frontend fetch request is failing"
+- "Improve UI design for report submission page"
+- "Create system architecture diagram for a MERN stack project"
 
-**Percentage of AI-generated code:** [Approximately X%]
+**Percentage of AI-generated code:** ~20–30%
 
 **Human Contributions:**
-- Architecture design and planning
-- Custom business logic implementation
-- Integration and testing
-- UI/UX design decisions
-
-*Note: Proper documentation of AI usage demonstrates transparency and earns bonus points in evaluation!*
-
----
+- Overall project idea and architecture design
+- Map integration and report logic
+- Frontend layout and feature implementation
+- Backend API creation and testing
+- Deployment setup and configuration
 
 ## Team Contributions
 
-- [Name 1]: [Specific contributions - e.g., Frontend development, API integration, etc.]
-- [Name 2]: [Specific contributions - e.g., Backend development, Database design, etc.]
-- [Name 3]: [Specific contributions - e.g., UI/UX design, Testing, Documentation, etc.]
+- Ankitha: Frontend development, map integration, UI styling, deployment setup
+- Salabha: Backend API development and database handling
+- Ankitha and Salabha: Testing, debugging, documentation, and diagrams
 
 ---
 
 ## License
 
-This project is licensed under the [LICENSE_NAME] License - see the [LICENSE](LICENSE) file for details.
+
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 **Common License Options:**
-- MIT License (Permissive, widely used)
-- Apache 2.0 (Permissive with patent grant)
-- GPL v3 (Copyleft, requires derivative works to be open source)
+MIT License
 
----
+Copyright (c) 2026 [Your Name or Team Name]
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
 
 Made with ❤️ at TinkerHub
