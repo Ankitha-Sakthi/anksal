@@ -289,7 +289,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 **Common License Options:**
 MIT License
 
-Copyright (c) 2026 [Your Name or Team Name]
+Copyright (c) 2026 Codex
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
